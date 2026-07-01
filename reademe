@@ -1,0 +1,1 @@
+Add a subtle network status indicator to the Header that alerts users when they are offline, using the navigator.onLine API.

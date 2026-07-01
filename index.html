@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anchor — a quiet list for a loud day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <header>
+    <div class="brand">
+      <h1>Anchor</h1>
+      <p>a quiet list for a loud day</p>
+    </div>
+    <div class="date" id="dateDisplay"></div>
+  </header>
+
+  <div class="focus-ribbon">
+    <div class="focus-top">
+      <div class="focus-label"><span class="pulse"></span> AI Focus</div>
+      <button class="refresh-btn" id="refreshFocus" title="Ask AI again">⟳</button>
+    </div>
+    <div class="focus-body" id="focusBody">
+      <span class="focus-empty">Add a task and I'll help you find where to start.</span>
+    </div>
+    <div class="focus-sub" id="focusSub"></div>
+  </div>
+
+  <div class="add-row">
+    <input type="text" id="taskInput" placeholder="Add a task…" maxlength="140">
+    <select class="priority-select" id="prioritySelect">
+      <option value="medium">medium</option>
+      <option value="high">high</option>
+      <option value="low">low</option>
+    </select>
+    <button class="add-btn" id="addBtn">Add</button>
+  </div>
+
+  <div class="toolbar">
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="done">Done</button>
+    </div>
+    <input type="text" class="search-box" id="searchBox" placeholder="Search…">
+  </div>
+
+  <div class="list" id="taskList"></div>
+
+  <footer>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label" id="progressLabel">0 of 0 done</div>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
